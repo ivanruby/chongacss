@@ -1,0 +1,223 @@
+/*
+ * chongaCSS
+ * Copyright 2014 Ivan Ruby
+ * Licensed under MIT (https://github.com/ivanruby/chongacss/blob/master/LICENSE)
+*/
+
+ /* Table of Contents - Tabela de conteúdos
+==================================================
+	# CSS reset - Redefinicao do CSS
+	# Effects - EFeitos
+	# Widgets - Módulos visuais
+	# Media Queries (Responsive Grid)
+*/
+
+/* # CSS reset
+================================================== */
+
+/** * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com */
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small,
+strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form,
+label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas,
+details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby,
+section, summary,time, mark, audio, video
+{ margin: 0;	padding: 0;	border: 0;	font-size: 100%;	font: inherit;	vertical-align: baseline;}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section 
+{ display: block;}
+body {	line-height: 1;}
+ol, ul {	list-style: none;}
+blockquote, q {	quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after {	content: '';	content: none;}
+table {	border-collapse: collapse;	border-spacing: 0;}
+
+
+/* # Styles - Regras
+================================================== */
+.space, .espaco {
+	margin: 15px;
+}
+
+.space-up, .espaco-em-cima {
+	margin-top: 15px;
+}
+
+.space-down, .espaco-em-baixo {
+	margin-bottom: 15px;
+}
+
+.space-left, .espaco-a-esquerda {
+	margin-left: 15px;
+}
+
+.space-right, .espaco-a-direita {
+	margin-right: 15px;
+}
+
+.space-inside, .espaco-interior {
+	padding: 10px;
+}
+
+.space-inside-up, .espaco-interior-em-cima {
+	padding-top: 10px;
+}
+
+.space-inside-down, .espaco-interior-em-baixo {
+	padding-bottom: 10px;
+}
+
+.space-inside-left, .espaco-interior-a-esquerda {
+	padding-left: 10px;
+}
+
+.space-inside-right, .espaco-interior-a-direita {
+	padding-right: 10px;
+}
+
+.align-left, .alinhar-a-esquerda {
+	float: left;
+}
+
+.align-right, .alinhar-a-direita {
+	float: right;
+}
+
+.center, .centralizar {
+	text-align: center;
+}
+
+
+/* Use clearfix to clear floating of elements
+   Use limpar-flutuacao para terminar a orientacao de elementos flutuantes */
+.clearfix:before,
+.clearfix:after,
+.limpar-flutuacao:before,
+.limpar-flutuacao:after {
+  content: '\0020';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0; }
+.limpar-flutuacao:after,
+.clearfix:after {
+  clear: both; }
+.limpar-flutuacao,
+.clearfix {
+  zoom: 1; }
+
+
+
+
+/* # EFfects - Efeitos
+================================================== */
+
+/* Static effects - Efeitos estáticos */
+.fx-shadow, .fx-sombra {
+	box-shadow: 0 0 5px rgba(0,0,0,.5);
+}
+
+.fx-shadow-light, .fx-sombra-leve {
+	box-shadow: 0 0 2px rgba(0,0,0,.5);
+}
+
+.fx-shadow-in, .fx-sombra-interior {
+	box-shadow: 0 0 5px rgba(0,0,0,.5) inset;
+}
+
+.fx-shadow-in, .fx-sombra-interior {
+	box-shadow: 0 0 2px rgba(0,0,0,.5) inset;
+}
+
+.fx-transition, .fx-transicao {
+	transition: all .3s ease-in-out;
+}
+
+.fx-transition-slow, .fx-transicao-lenta {
+	transition: all 1s ease-in-out;
+}
+
+/* On-hover - Efeitos quando o mouse está em cima do elemento */
+.fx-fade-in, .fx-aparecer {}
+.fx-fade-out, .fx-desaparecer {}
+.fx-slide-from-left, .fx-entrar-da-esquerda {}
+.fx-slide-from-right, .fx-entrar-da-direita {}
+.fx-slide-from-top, .fx-entrar-de-cima {}
+.fx-slide-from-bottom, .fx-entrar-de-baixo {}
+.fx-zoom-in, .fx-zoom-mais {}
+.fx-zoom-out, .fx-zoom-menos {}
+
+
+/* # Widgets - Módulos visuais
+================================================== */
+
+.menu-dropdown {}
+.modal, .janela {}
+
+.tooltip, .dica {
+  position:relative;
+  transition: all .5s ease-in-out;
+}
+
+.tooltip span, .dica span {
+  display:none;
+}
+
+.tooltip:hover span, .dica:hover span {
+  display:block;
+  position: absolute;
+  z-index: 999;
+  left:0;
+  top:20px;
+  
+  background-color: #FFF;
+  color:#444;
+}
+
+.ribbon-left, .fita-esquerda {
+  position: relative;
+  width: 300px;
+  margin-left: -26px;
+  padding: 5px;
+
+  background-color: #FFF;
+  color: #666;
+
+  box-shadow: 0 0 2px 1px rgba(0,0,0,.5);
+}
+
+.ribbon-left:before, .fita-esquerda:before {
+  content: '';
+  position: absolute;
+  bottom:-12px;
+  left: 0px;
+  width:0;
+  border-width: 6px 8px;
+  border-style: solid;
+  border-color: #555 #555 transparent transparent;
+}
+
+.ribbon-right, .fita-direita {}
+.ribbon-full, .fita-tudo {}
+
+
+
+
+/* #Media Queries
+================================================== */
+
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {}
