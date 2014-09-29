@@ -1,5 +1,5 @@
 /*
- * chongaCSS
+ * chongaCSS v0.0
  * Copyright 2014 Ivan Ruby
  * Licensed under MIT (https://github.com/ivanruby/chongacss/blob/master/LICENSE)
 */
@@ -7,7 +7,7 @@
  /* Table of Contents - Tabela de conteúdos
 ==================================================
 	# CSS reset - Redefinicao do CSS
-	# Effects - EFeitos
+	# Effects - Efeitos
 	# Widgets - Módulos visuais
 	# Media Queries (Responsive Grid)
 */
@@ -33,58 +33,50 @@ blockquote:before, blockquote:after,q:before, q:after {	content: '';	content: no
 table {	border-collapse: collapse;	border-spacing: 0;}
 
 
-/* # Styles - Regras
+/* # Typography - Tipografia
 ================================================== */
-.space, .espaco {
-	margin: 15px;
+body {
+  font-family: "Lucida Bright", Georgia, serif;
+  font-size: 15px;
+  color: #000;
 }
 
-.space-up, .espaco-em-cima {
-	margin-top: 15px;
-}
+h1, h2, h3, h4, h5, h6 { margin: 10px 0; }
 
-.space-down, .espaco-em-baixo {
-	margin-bottom: 15px;
-}
+h1 { font-size: 2em; }
+h2 { font-size: 1.8em; }
+h3 { font-size: 1.6em; }
+h4 { font-size: 1.4em; }
+h5 { font-size: 1.3em; }
+h6 { font-size: 1.2em; }
 
-.space-left, .espaco-a-esquerda {
-	margin-left: 15px;
-}
+p { margin-bottom: 10px;}
+b, strong { font-weight: bold }
+i, em { font-style: italic }
+blockquote { border-left: solid 3px #CCC; padding: 10px}
+blockquote > span { display: block; padding: 5px 0 0 15px;}
 
-.space-right, .espaco-a-direita {
-	margin-right: 15px;
-}
+/* # Helper classes - Regras de ajuda
+================================================== */
+.space, .espaco { margin: 15px; }
+.space-up, .espaco-em-cima { margin-top: 15px; }
+.space-down, .espaco-em-baixo { margin-bottom: 15px; }
+.space-left, .espaco-a-esquerda { margin-left: 15px; }
+.space-right, .espaco-a-direita { margin-right: 15px; }
+.space-inside, .espaco-interior { padding: 10px; }
+.space-inside-up, .espaco-interior-em-cima { padding-top: 10px; }
+.space-inside-down, .espaco-interior-em-baixo { padding-bottom: 10px; }
+.space-inside-left, .espaco-interior-a-esquerda { padding-left: 10px; }
+.space-inside-right, .espaco-interior-a-direita { padding-right: 10px; }
 
-.space-inside, .espaco-interior {
-	padding: 10px;
-}
+.align-left, .alinhar-a-esquerda { float: left; } 
+.align-right, .alinhar-a-direita { float: right; }
 
-.space-inside-up, .espaco-interior-em-cima {
-	padding-top: 10px;
-}
+.center, .centralizar { text-align: center; }
 
-.space-inside-down, .espaco-interior-em-baixo {
-	padding-bottom: 10px;
-}
-
-.space-inside-left, .espaco-interior-a-esquerda {
-	padding-left: 10px;
-}
-
-.space-inside-right, .espaco-interior-a-direita {
-	padding-right: 10px;
-}
-
-.align-left, .alinhar-a-esquerda {
-	float: left;
-}
-
-.align-right, .alinhar-a-direita {
-	float: right;
-}
-
-.center, .centralizar {
-	text-align: center;
+.full-width { 
+  display: block; 
+  width: 100%;
 }
 
 
@@ -108,35 +100,16 @@ table {	border-collapse: collapse;	border-spacing: 0;}
   zoom: 1; }
 
 
-
-
 /* # EFfects - Efeitos
 ================================================== */
 
 /* Static effects - Efeitos estáticos */
-.fx-shadow, .fx-sombra {
-	box-shadow: 0 0 5px rgba(0,0,0,.5);
-}
-
-.fx-shadow-light, .fx-sombra-leve {
-	box-shadow: 0 0 2px rgba(0,0,0,.5);
-}
-
-.fx-shadow-in, .fx-sombra-interior {
-	box-shadow: 0 0 5px rgba(0,0,0,.5) inset;
-}
-
-.fx-shadow-in, .fx-sombra-interior {
-	box-shadow: 0 0 2px rgba(0,0,0,.5) inset;
-}
-
-.fx-transition, .fx-transicao {
-	transition: all .3s ease-in-out;
-}
-
-.fx-transition-slow, .fx-transicao-lenta {
-	transition: all 1s ease-in-out;
-}
+.fx-shadow, .fx-sombra { box-shadow: 0 0 5px rgba(0,0,0,.5); }
+.fx-shadow-light, .fx-sombra-leve {	box-shadow: 0 0 2px rgba(0,0,0,.5); }
+.fx-shadow-in, .fx-sombra-interior { box-shadow: 0 0 5px rgba(0,0,0,.5) inset; }
+.fx-shadow-in, .fx-sombra-interior { box-shadow: 0 0 2px rgba(0,0,0,.5) inset; }
+.fx-transition, .fx-transicao { transition: all .3s ease-in-out; }
+.fx-transition-slow, .fx-transicao-lenta { transition: all 1s ease-in-out; }
 
 /* On-hover - Efeitos quando o mouse está em cima do elemento */
 .fx-fade-in, .fx-aparecer {}
@@ -155,15 +128,8 @@ table {	border-collapse: collapse;	border-spacing: 0;}
 .menu-dropdown {}
 .modal, .janela {}
 
-.tooltip, .dica {
-  position:relative;
-  transition: all .5s ease-in-out;
-}
-
-.tooltip span, .dica span {
-  display:none;
-}
-
+.tooltip, .dica { position:relative; transition: all .5s ease-in-out; }
+.tooltip span, .dica span { display:none; }
 .tooltip:hover span, .dica:hover span {
   display:block;
   position: absolute;
@@ -202,6 +168,191 @@ table {	border-collapse: collapse;	border-spacing: 0;}
 .ribbon-full, .fita-tudo {}
 
 
+/* # Grid - Grelha
+================================================== */
+
+.ch-container { position: relative; width: 960px; margin: 0 auto; }
+.ch-container .column,
+.ch-container .columns { float: left; display: inline; margin: 0 10px; }
+.row { margin-bottom: 20px; }
+
+/* Nested Column Classes */
+.column.alpha, .columns.alpha               { margin-left: 0; }
+.column.omega, .columns.omega               { margin-right: 0; }
+
+/* Base Grid */
+.ch-container .one.column,
+.ch-container .one.columns                     { width: 40px;  }
+.ch-container .two.columns                     { width: 100px; }
+.ch-container .three.columns                   { width: 160px; }
+.ch-container .four.columns                    { width: 220px; }
+.ch-container .five.columns                    { width: 280px; }
+.ch-container .six.columns                     { width: 340px; }
+.ch-container .seven.columns                   { width: 400px; }
+.ch-container .eight.columns                   { width: 460px; }
+.ch-container .nine.columns                    { width: 520px; }
+.ch-container .ten.columns                     { width: 580px; }
+.ch-container .eleven.columns                  { width: 640px; }
+.ch-container .twelve.columns                  { width: 700px; }
+.ch-container .thirteen.columns                { width: 760px; }
+.ch-container .fourteen.columns                { width: 820px; }
+.ch-container .fifteen.columns                 { width: 880px; }
+.ch-container .sixteen.columns                 { width: 940px; }
+
+.ch-container .one-third.column                { width: 300px; }
+.ch-container .two-thirds.column               { width: 620px; }
+
+/* Offsets */
+.ch-container .offset-by-one                   { padding-left: 60px;  }
+.ch-container .offset-by-two                   { padding-left: 120px; }
+.ch-container .offset-by-three                 { padding-left: 180px; }
+.ch-container .offset-by-four                  { padding-left: 240px; }
+.ch-container .offset-by-five                  { padding-left: 300px; }
+.ch-container .offset-by-six                   { padding-left: 360px; }
+.ch-container .offset-by-seven                 { padding-left: 420px; }
+.ch-container .offset-by-eight                 { padding-left: 480px; }
+.ch-container .offset-by-nine                  { padding-left: 540px; }
+.ch-container .offset-by-ten                   { padding-left: 600px; }
+.ch-container .offset-by-eleven                { padding-left: 660px; }
+.ch-container .offset-by-twelve                { padding-left: 720px; }
+.ch-container .offset-by-thirteen              { padding-left: 780px; }
+.ch-container .offset-by-fourteen              { padding-left: 840px; }
+.ch-container .offset-by-fifteen               { padding-left: 900px; }
+
+
+
+/* #Tablet (Portrait)
+================================================== */
+
+/* Note: Design for a width of 768px */
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    .ch-container                                  { width: 768px; }
+    .ch-container .column,
+    .ch-container .columns                         { margin-left: 10px; margin-right: 10px;  }
+    .column.alpha, .columns.alpha               { margin-left: 0; margin-right: 10px; }
+    .column.omega, .columns.omega               { margin-right: 0; margin-left: 10px; }
+    .alpha.omega                                { margin-left: 0; margin-right: 0; }
+
+    .ch-container .one.column,
+    .ch-container .one.columns                     { width: 28px; }
+    .ch-container .two.columns                     { width: 76px; }
+    .ch-container .three.columns                   { width: 124px; }
+    .ch-container .four.columns                    { width: 172px; }
+    .ch-container .five.columns                    { width: 220px; }
+    .ch-container .six.columns                     { width: 268px; }
+    .ch-container .seven.columns                   { width: 316px; }
+    .ch-container .eight.columns                   { width: 364px; }
+    .ch-container .nine.columns                    { width: 412px; }
+    .ch-container .ten.columns                     { width: 460px; }
+    .ch-container .eleven.columns                  { width: 508px; }
+    .ch-container .twelve.columns                  { width: 556px; }
+    .ch-container .thirteen.columns                { width: 604px; }
+    .ch-container .fourteen.columns                { width: 652px; }
+    .ch-container .fifteen.columns                 { width: 700px; }
+    .ch-container .sixteen.columns                 { width: 748px; }
+
+    .ch-container .one-third.column                { width: 236px; }
+    .ch-container .two-thirds.column               { width: 492px; }
+
+    /* Offsets */
+    .ch-container .offset-by-one                   { padding-left: 48px; }
+    .ch-container .offset-by-two                   { padding-left: 96px; }
+    .ch-container .offset-by-three                 { padding-left: 144px; }
+    .ch-container .offset-by-four                  { padding-left: 192px; }
+    .ch-container .offset-by-five                  { padding-left: 240px; }
+    .ch-container .offset-by-six                   { padding-left: 288px; }
+    .ch-container .offset-by-seven                 { padding-left: 336px; }
+    .ch-container .offset-by-eight                 { padding-left: 384px; }
+    .ch-container .offset-by-nine                  { padding-left: 432px; }
+    .ch-container .offset-by-ten                   { padding-left: 480px; }
+    .ch-container .offset-by-eleven                { padding-left: 528px; }
+    .ch-container .offset-by-twelve                { padding-left: 576px; }
+    .ch-container .offset-by-thirteen              { padding-left: 624px; }
+    .ch-container .offset-by-fourteen              { padding-left: 672px; }
+    .ch-container .offset-by-fifteen               { padding-left: 720px; }
+}
+
+
+/*  #Mobile (Portrait)
+================================================== */
+
+/* Note: Design for a width of 320px */
+
+@media only screen and (max-width: 767px) {
+    .ch-container { width: 300px; }
+    .ch-container .columns,
+    .ch-container .column { margin: 0; }
+
+    .ch-container .one.column,
+    .ch-container .one.columns,
+    .ch-container .two.columns,
+    .ch-container .three.columns,
+    .ch-container .four.columns,
+    .ch-container .five.columns,
+    .ch-container .six.columns,
+    .ch-container .seven.columns,
+    .ch-container .eight.columns,
+    .ch-container .nine.columns,
+    .ch-container .ten.columns,
+    .ch-container .eleven.columns,
+    .ch-container .twelve.columns,
+    .ch-container .thirteen.columns,
+    .ch-container .fourteen.columns,
+    .ch-container .fifteen.columns,
+    .ch-container .sixteen.columns,
+    .ch-container .one-third.column,
+    .ch-container .two-thirds.column  { width: 300px; }
+
+    /* Offsets */
+    .ch-container .offset-by-one,
+    .ch-container .offset-by-two,
+    .ch-container .offset-by-three,
+    .ch-container .offset-by-four,
+    .ch-container .offset-by-five,
+    .ch-container .offset-by-six,
+    .ch-container .offset-by-seven,
+    .ch-container .offset-by-eight,
+    .ch-container .offset-by-nine,
+    .ch-container .offset-by-ten,
+    .ch-container .offset-by-eleven,
+    .ch-container .offset-by-twelve,
+    .ch-container .offset-by-thirteen,
+    .ch-container .offset-by-fourteen,
+    .ch-container .offset-by-fifteen { padding-left: 0; }
+
+}
+
+
+/* #Mobile (Landscape)
+================================================== */
+
+/* Note: Design for a width of 480px */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .ch-container { width: 420px; }
+    .ch-container .columns,
+    .ch-container .column { margin: 0; }
+
+    .ch-container .one.column,
+    .ch-container .one.columns,
+    .ch-container .two.columns,
+    .ch-container .three.columns,
+    .ch-container .four.columns,
+    .ch-container .five.columns,
+    .ch-container .six.columns,
+    .ch-container .seven.columns,
+    .ch-container .eight.columns,
+    .ch-container .nine.columns,
+    .ch-container .ten.columns,
+    .ch-container .eleven.columns,
+    .ch-container .twelve.columns,
+    .ch-container .thirteen.columns,
+    .ch-container .fourteen.columns,
+    .ch-container .fifteen.columns,
+    .ch-container .sixteen.columns,
+    .ch-container .one-third.column,
+    .ch-container .two-thirds.column { width: 420px; }
 
 
 /* #Media Queries
