@@ -20,21 +20,31 @@
 	<body>
 		<div class="ch-container">
 			<h2 class="center">Typography</h2>
+			
+			<div class="row">
+				<div class="desktop-4 tablet-one-third phone-5">
+					<h1>Heading &lt;h1&gt;</h1>
+					<h2>Heading &lt;h2&gt;</h2>
+					<h3>Heading &lt;h3&gt;</h3>
+					<h4>Heading &lt;h4&gt;</h4>
+					<h5>Heading &lt;h5&gt;</h5>
+					<h6>Heading &lt;h6&gt;</h6>
+				</div>
+			
+				<div class="desktop-8 tablet-two-thirds phone-7">
+					<h2>A paragraph</h2>
+					<p class="">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo enim ratione repudiandae soluta itaque nam dolores et autem laborum doloremque numquam reiciendis, totam, quis dignissimos rem. Facilis quibusdam, ducimus minus?
+					</p>
 
-			<h1>Heading &lt;h1&gt;</h1>
-			<h2>Heading &lt;h2&gt;</h2>
-			<h3>Heading &lt;h3&gt;</h3>
-			<h4>Heading &lt;h4&gt;</h4>
-			<h5>Heading &lt;h5&gt;</h5>
-			<h6>Heading &lt;h6&gt;</h6>
+					<blockquote class="space-up">
+						A blockquote with author. <br>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi libero quam laudantium ullam deserunt ea. Odio quibusdam.
+						<span>- Author</span>
+					</blockquote>
+				</div>
+			</div>
 			
-			<br>
-			<h2>A paragraph</h2>
-			<p class="">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo enim ratione repudiandae soluta itaque nam dolores et autem laborum doloremque numquam reiciendis, totam, quis dignissimos rem. Facilis quibusdam, ducimus minus?
-			</p>
-			
-			<br>
 			<div class="fx-shadow center space space-inside">
 				<b class="full-width">This is a bolded text</b>
 				<i class="full-width">This is an italicized text</i>
@@ -43,25 +53,23 @@
 			</div>
 			
 			<br>
-			<blockquote>
-				A blockquote with author. <br>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi libero quam laudantium ullam deserunt ea. Odio quibusdam, autem dolor itaque architecto asperiores soluta tenetur eius, dicta quam nam, nulla harum.
-				<span>- Author</span>
-			</blockquote>
+			
 			
 			<br>
 			<h2 class="center">Helper classes</h2>
 
 			<h2 class="center">Form elements</h2>
 			<form>
-				<fieldset>
-					<legend>Form name</legend>
+				<fieldset>					
 					<label for="regularInput">Regular Input</label>
-				<input type="text" id="regularInput" />
+					<input type="text" id="regularInput" />
 				</fieldset>
 				
-				<label for="regularTextarea">Regular Textarea</label>
-				<textarea id="regularTextarea"></textarea>
+				<fieldset>
+					<label for="regularTextarea">Regular Textarea</label>
+					<textarea id="regularTextarea"></textarea>
+				</fieldset>
+				
 				<label for="selectList">Select List</label>
 				<select id="selectList">
 					<option value="Option 1">Option 1</option>
@@ -69,6 +77,7 @@
 					<option value="Option 3">Option 3</option>
 					<option value="Option 4">Option 4</option>
 				</select>
+
 				<fieldset>
 					<legend>Checkboxes</legend>
 					<label for="regularCheckbox">

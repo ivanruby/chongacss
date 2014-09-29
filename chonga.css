@@ -53,7 +53,7 @@ h6 { font-size: 1.2em; }
 p { margin-bottom: 10px;}
 b, strong { font-weight: bold }
 i, em { font-style: italic }
-blockquote { border-left: solid 3px #CCC; padding: 10px}
+blockquote { font-style: italic; border-left: solid 2px #EEE; padding: 10px}
 blockquote > span { display: block; padding: 5px 0 0 15px;}
 
 /* # Helper classes - Regras de ajuda
@@ -85,15 +85,18 @@ blockquote > span { display: block; padding: 5px 0 0 15px;}
 .clearfix:before,
 .clearfix:after,
 .limpar-flutuacao:before,
-.limpar-flutuacao:after {
+.limpar-flutuacao:after,
+.row:before, .row:after,
+.linha:before, .linha:after{
   content: '\0020';
   display: block;
   overflow: hidden;
   visibility: hidden;
   width: 0;
   height: 0; }
+
 .limpar-flutuacao:after,
-.clearfix:after {
+.clearfix:after, .row:after, .linha:after {
   clear: both; }
 .limpar-flutuacao,
 .clearfix {
@@ -171,204 +174,121 @@ blockquote > span { display: block; padding: 5px 0 0 15px;}
 /* # Grid - Grelha
 ================================================== */
 
-.ch-container { position: relative; width: 960px; margin: 0 auto; }
-.ch-container .column,
-.ch-container .columns { float: left; display: inline; margin: 0 10px; }
-.row { margin-bottom: 20px; }
+.ch-container, .ch-contentor { position: relative; margin: 0 auto; }
+.row, .linha { margin-bottom: 20px; }
 
-/* Nested Column Classes */
-.column.alpha, .columns.alpha               { margin-left: 0; }
-.column.omega, .columns.omega               { margin-right: 0; }
-
-/* Base Grid */
-.ch-container .one.column,
-.ch-container .one.columns                     { width: 40px;  }
-.ch-container .two.columns                     { width: 100px; }
-.ch-container .three.columns                   { width: 160px; }
-.ch-container .four.columns                    { width: 220px; }
-.ch-container .five.columns                    { width: 280px; }
-.ch-container .six.columns                     { width: 340px; }
-.ch-container .seven.columns                   { width: 400px; }
-.ch-container .eight.columns                   { width: 460px; }
-.ch-container .nine.columns                    { width: 520px; }
-.ch-container .ten.columns                     { width: 580px; }
-.ch-container .eleven.columns                  { width: 640px; }
-.ch-container .twelve.columns                  { width: 700px; }
-.ch-container .thirteen.columns                { width: 760px; }
-.ch-container .fourteen.columns                { width: 820px; }
-.ch-container .fifteen.columns                 { width: 880px; }
-.ch-container .sixteen.columns                 { width: 940px; }
-
-.ch-container .one-third.column                { width: 300px; }
-.ch-container .two-thirds.column               { width: 620px; }
-
-/* Offsets */
-.ch-container .offset-by-one                   { padding-left: 60px;  }
-.ch-container .offset-by-two                   { padding-left: 120px; }
-.ch-container .offset-by-three                 { padding-left: 180px; }
-.ch-container .offset-by-four                  { padding-left: 240px; }
-.ch-container .offset-by-five                  { padding-left: 300px; }
-.ch-container .offset-by-six                   { padding-left: 360px; }
-.ch-container .offset-by-seven                 { padding-left: 420px; }
-.ch-container .offset-by-eight                 { padding-left: 480px; }
-.ch-container .offset-by-nine                  { padding-left: 540px; }
-.ch-container .offset-by-ten                   { padding-left: 600px; }
-.ch-container .offset-by-eleven                { padding-left: 660px; }
-.ch-container .offset-by-twelve                { padding-left: 720px; }
-.ch-container .offset-by-thirteen              { padding-left: 780px; }
-.ch-container .offset-by-fourteen              { padding-left: 840px; }
-.ch-container .offset-by-fifteen               { padding-left: 900px; }
-
-
-
-/* #Tablet (Portrait)
-================================================== */
-
-/* Note: Design for a width of 768px */
-
-@media only screen and (min-width: 768px) and (max-width: 959px) {
-    .ch-container                                  { width: 768px; }
-    .ch-container .column,
-    .ch-container .columns                         { margin-left: 10px; margin-right: 10px;  }
-    .column.alpha, .columns.alpha               { margin-left: 0; margin-right: 10px; }
-    .column.omega, .columns.omega               { margin-right: 0; margin-left: 10px; }
-    .alpha.omega                                { margin-left: 0; margin-right: 0; }
-
-    .ch-container .one.column,
-    .ch-container .one.columns                     { width: 28px; }
-    .ch-container .two.columns                     { width: 76px; }
-    .ch-container .three.columns                   { width: 124px; }
-    .ch-container .four.columns                    { width: 172px; }
-    .ch-container .five.columns                    { width: 220px; }
-    .ch-container .six.columns                     { width: 268px; }
-    .ch-container .seven.columns                   { width: 316px; }
-    .ch-container .eight.columns                   { width: 364px; }
-    .ch-container .nine.columns                    { width: 412px; }
-    .ch-container .ten.columns                     { width: 460px; }
-    .ch-container .eleven.columns                  { width: 508px; }
-    .ch-container .twelve.columns                  { width: 556px; }
-    .ch-container .thirteen.columns                { width: 604px; }
-    .ch-container .fourteen.columns                { width: 652px; }
-    .ch-container .fifteen.columns                 { width: 700px; }
-    .ch-container .sixteen.columns                 { width: 748px; }
-
-    .ch-container .one-third.column                { width: 236px; }
-    .ch-container .two-thirds.column               { width: 492px; }
-
-    /* Offsets */
-    .ch-container .offset-by-one                   { padding-left: 48px; }
-    .ch-container .offset-by-two                   { padding-left: 96px; }
-    .ch-container .offset-by-three                 { padding-left: 144px; }
-    .ch-container .offset-by-four                  { padding-left: 192px; }
-    .ch-container .offset-by-five                  { padding-left: 240px; }
-    .ch-container .offset-by-six                   { padding-left: 288px; }
-    .ch-container .offset-by-seven                 { padding-left: 336px; }
-    .ch-container .offset-by-eight                 { padding-left: 384px; }
-    .ch-container .offset-by-nine                  { padding-left: 432px; }
-    .ch-container .offset-by-ten                   { padding-left: 480px; }
-    .ch-container .offset-by-eleven                { padding-left: 528px; }
-    .ch-container .offset-by-twelve                { padding-left: 576px; }
-    .ch-container .offset-by-thirteen              { padding-left: 624px; }
-    .ch-container .offset-by-fourteen              { padding-left: 672px; }
-    .ch-container .offset-by-fifteen               { padding-left: 720px; }
+.col-1, .cols-2, .cols-3, .cols-4, .cols-5, .cols-6, .cols-7, .cols-8, .cols-9, .cols-10, .cols-11, .cols-12,
+.desktop-1, .desktop-2, .desktop-3, .desktop-4, .desktop-5, .desktop-6, .desktop-7, .desktop-8, .desktop-9, .desktop-10, .desktop-12, .desktop-12,
+.tablet-1, .tablet-2, .tablet-3, .tablet-4, .tablet-5, .tablet-6, .tablet-7, .tablet-8, .tablet-9, .tablet-10, .tablet-12, .tablet-12,
+.phone-1, .phone-2, .phone-3, .phone-4, .phone-5, .phone-6, .phone-7, .phone-8, .phone-9, .phone-10, .phone-12, .phone-12 { 
+  float: left; display: inline; padding: 0 1%;
 }
 
+/* Standard grid - Non-responsive */
+.col-1   { width: 6.333%;  }
+.cols-2  { width: 14.667%; }
+.cols-3  { width: 23%; }
+.cols-4  { width: 31.334%; }
+.cols-5  { width: 39.667%; }
+.cols-6  { width: 48%; }
+.cols-7  { width: 56.333%; }
+.cols-8  { width: 64.667%; }
+.cols-9  { width: 73%; }
+.cols-10 { width: 81.334%; }
+.cols-11 { width: 89.667%; }
+.cols-12 { width: 98%; }
 
-/*  #Mobile (Portrait)
-================================================== */
+.col-one-third, .col-um-terco       { width: 31.333%; }
+.col-two-thirds, .col-dois-tercos   { width: 64.667%; }
+.col-three-thirds, .col-tres-tercos { width: 98%; }
 
-/* Note: Design for a width of 320px */
-
-@media only screen and (max-width: 767px) {
-    .ch-container { width: 300px; }
-    .ch-container .columns,
-    .ch-container .column { margin: 0; }
-
-    .ch-container .one.column,
-    .ch-container .one.columns,
-    .ch-container .two.columns,
-    .ch-container .three.columns,
-    .ch-container .four.columns,
-    .ch-container .five.columns,
-    .ch-container .six.columns,
-    .ch-container .seven.columns,
-    .ch-container .eight.columns,
-    .ch-container .nine.columns,
-    .ch-container .ten.columns,
-    .ch-container .eleven.columns,
-    .ch-container .twelve.columns,
-    .ch-container .thirteen.columns,
-    .ch-container .fourteen.columns,
-    .ch-container .fifteen.columns,
-    .ch-container .sixteen.columns,
-    .ch-container .one-third.column,
-    .ch-container .two-thirds.column  { width: 300px; }
-
-    /* Offsets */
-    .ch-container .offset-by-one,
-    .ch-container .offset-by-two,
-    .ch-container .offset-by-three,
-    .ch-container .offset-by-four,
-    .ch-container .offset-by-five,
-    .ch-container .offset-by-six,
-    .ch-container .offset-by-seven,
-    .ch-container .offset-by-eight,
-    .ch-container .offset-by-nine,
-    .ch-container .offset-by-ten,
-    .ch-container .offset-by-eleven,
-    .ch-container .offset-by-twelve,
-    .ch-container .offset-by-thirteen,
-    .ch-container .offset-by-fourteen,
-    .ch-container .offset-by-fifteen { padding-left: 0; }
-
-}
-
-
-/* #Mobile (Landscape)
-================================================== */
-
-/* Note: Design for a width of 480px */
-
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-    .ch-container { width: 420px; }
-    .ch-container .columns,
-    .ch-container .column { margin: 0; }
-
-    .ch-container .one.column,
-    .ch-container .one.columns,
-    .ch-container .two.columns,
-    .ch-container .three.columns,
-    .ch-container .four.columns,
-    .ch-container .five.columns,
-    .ch-container .six.columns,
-    .ch-container .seven.columns,
-    .ch-container .eight.columns,
-    .ch-container .nine.columns,
-    .ch-container .ten.columns,
-    .ch-container .eleven.columns,
-    .ch-container .twelve.columns,
-    .ch-container .thirteen.columns,
-    .ch-container .fourteen.columns,
-    .ch-container .fifteen.columns,
-    .ch-container .sixteen.columns,
-    .ch-container .one-third.column,
-    .ch-container .two-thirds.column { width: 420px; }
+/* Offsets - Deslocamentos */
+.offset-by-one, .deslocar-uma-col       { margin-left: 8.333%;  }
+.offset-by-two, .deslocar-duas-cols     { margin-left: 16.667%; }
+.offset-by-three, .descolar-tres-cols   { margin-left: 25%; }
+.offset-by-four, .deslocar-quatro-cols  { margin-left: 33.334%; }
+.offset-by-five, .deslocar-cinco-cols   { margin-left: 41.667%; }
+.offset-by-six, .deslocar-seis-cols     { margin-left: 50%; }
+.offset-by-seven, .deslocar-sete-cols   { margin-left: 58.333%; }
+.offset-by-eight, .deslocar-oito-cols   { margin-left: 66.667%; }
+.offset-by-nine, .deslocar-nove-cols    { margin-left: 75%; }
+.offset-by-ten, .deslocar-dez-cols      { margin-left: 83.334%; }
+.offset-by-eleven, .deslocar-onze-cols  { margin-left: 91.667%; }
 
 
 /* #Media Queries
 ================================================== */
 
-/* Smaller than standard 960 (devices and browsers) */
-@media only screen and (max-width: 959px) {}
+/* Desktop */
+@media only screen and (min-width: 981px) {
+  .ch-container { width: 960px; }
+  .desktop-1   { width: 6.333%;  }
+  .desktop-2  { width: 14.667%; }
+  .desktop-3  { width: 23%; }
+  .desktop-4  { width: 31.334%; }
+  .desktop-5  { width: 39.667%; }
+  .desktop-6  { width: 48%; }
+  .desktop-7  { width: 56.333%; }
+  .desktop-8  { width: 64.667%; }
+  .desktop-9  { width: 73%; }
+  .desktop-10 { width: 81.334%; }
+  .desktop-11 { width: 89.667%; }
+  .desktop-12 { width: 98%; }
 
-/* Tablet Portrait size to standard 960 (devices and browsers) */
-@media only screen and (min-width: 768px) and (max-width: 959px) {}
+  .desktop-one-third, .desktop-um-terco       { width: 31.333%; }
+  .desktop-two-thirds, .desktop-dois-tercos   { width: 64.667%; }
+  .desktop-three-thirds, .desktop-tres-tercos { width: 98%; }
+}
 
-/* All Mobile Sizes (devices and browser) */
-@media only screen and (max-width: 767px) {}
+/* Tablet */
+@media only screen and (min-width: 789px) and (max-width: 980px) {
+  .ch-container { width: 768px; }
+  .tablet-1   { width: 6.333%;  }
+  .tablet-2  { width: 14.667%; }
+  .tablet-3  { width: 23%; }
+  .tablet-4  { width: 31.334%; }
+  .tablet-5  { width: 39.667%; }
+  .tablet-6  { width: 48%; }
+  .tablet-7  { width: 56.333%; }
+  .tablet-8  { width: 64.667%; }
+  .tablet-9  { width: 73%; }
+  .tablet-10 { width: 81.334%; }
+  .tablet-11 { width: 89.667%; }
+  .tablet-12 { width: 98%; }
+  
+  .tablet-one-third, .tablet-um-terco       { width: 31.333%; }
+  .tablet-two-thirds, .tablet-dois-tercos   { width: 64.667%; }
+  .tablet-three-thirds, .tablet-tres-tercos { width: 98%; }
+}
 
-/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
-@media only screen and (min-width: 480px) and (max-width: 767px) {}
+/* Phone-lg (large) */
+@media only screen and (min-width: 501px) and (max-width: 788px) {
+  .ch-container { width: 480px; }
+  .phone-1  { width: 6.333%;  }
+  .phone-2  { width: 14.667%; }
+  .phone-3  { width: 23%; }
+  .phone-4  { width: 31.334%; }
+  .phone-5  { width: 39.667%; }
+  .phone-6  { width: 48%; }
+  .phone-7  { width: 56.333%; }
+  .phone-8  { width: 64.667%; }
+  .phone-9  { width: 73%; }
+  .phone-10 { width: 81.334%; }
+  .phone-11 { width: 89.667%; }
+  .phone-12 { width: 98%; }
 
-/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-@media only screen and (max-width: 479px) {}
+  .col-one-third, .col-um-terco       { width: 31.333%; }
+  .col-two-thirds, .col-dois-tercos   { width: 64.667%; }
+  .col-three-thirds, .col-tres-tercos { width: 98%; }
+}
+
+/* Phone-sm (small) */
+@media only screen and (max-width: 500px) {
+  .ch-container { width: 320px; }
+  .col-1, .cols-2, .cols-3, .cols-4, .cols-5, .cols-6, .cols-7, .cols-8, .cols-9, .cols-10, .cols-11, .cols-12,
+  .desktop-1, .desktop-2, .desktop-3, .desktop-4, .desktop-5, .desktop-6, .desktop-7, .desktop-8, .desktop-9, .desktop-10, .desktop-12, .desktop-12,
+  .tablet-1, .tablet-2, .tablet-3, .tablet-4, .tablet-5, .tablet-6, .tablet-7, .tablet-8, .tablet-9, .tablet-10, .tablet-12, .tablet-12,
+  .phone-1, .phone-2, .phone-3, .phone-4, .phone-5, .phone-6, .phone-7, .phone-8, .phone-9, .phone-10, .phone-12, .phone-12 { 
+    display: block; width: 100%;
+  }
+}
