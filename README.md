@@ -20,13 +20,15 @@ Initial features:
 - Effects: tooltips, ribbons, shadows, etc (v0.4 ?)
 
 
-The framework will be bilingual, i.e., class names will be in English and Portuguese.
+ChongaCSS is a bilingual framework, i.e., class names will be in English and Portuguese.
+Although possible, inclunding other languages can prove to be impractical due to its effects on the file size. Solutions to implement other languages dynamically can be studied.
 
 License
 =======
 MIT License. Free for commercial and non-commercial uses
 
 
-Cheers!
+
+*Cheers!*
 
 Ivan Ruby
