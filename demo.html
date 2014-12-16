@@ -6,7 +6,7 @@
 		<title>ChongaCSS Demo</title>
 		
 		<!-- Meta Section -->			
-		<meta name="keywords" content="chonga, css, demo">
+		<meta name="keywords" content="chonga, css, framework, demo">
 		
 		<meta name="description" content="Demo for the ChongaCSS Framework">
 		
@@ -18,15 +18,10 @@
 		<link rel="stylesheet" href="chonga.css" type="text/css" media="screen">
 	</head>	
 	<body>
-		<div class="ch-container">
-			<div class="desktop-visible">Desktop</div>
-			<div class="tablet-visible">Tablet</div>
-			<div class="phone-visible">Phone</div>
-
-			<h2 class="center">Typography</h2>
-			
+		<div class="ch-container">			
 			<div class="row">
-				<div class="desktop-4 tablet-one-third phone-5">
+				<h2 class="center">Typography</h2>
+				<div class="phone-5 tablet-one-third desktop-4">
 					<h1>Heading &lt;h1&gt;</h1>
 					<h2>Heading &lt;h2&gt;</h2>
 					<h3>Heading &lt;h3&gt;</h3>
@@ -35,7 +30,7 @@
 					<h6>Heading &lt;h6&gt;</h6>
 				</div>
 			
-				<div class="desktop-8 tablet-two-thirds phone-7">
+				<div class="phone-7 tablet-two-thirds desktop-8">
 					<h2>A paragraph</h2>
 					<p class="">
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo enim ratione repudiandae soluta itaque nam dolores et autem laborum doloremque numquam reiciendis, totam, quis dignissimos rem. Facilis quibusdam, ducimus minus?
@@ -49,63 +44,63 @@
 				</div>
 			</div>
 			
-			<div class="fx-shadow center space space-inside">
+			<div class="row fx-shadow center space space-inside">
 				<b class="full-width">This is a bolded text</b>
 				<i class="full-width">This is an italicized text</i>
 				<strong class="full-width">This is a strong text</strong>
 				<em class="full-width">This is an emphasized text</em>
 			</div>
 			
-			<br>
-			
-			
-			<br>
-			<h2 class="center">Helper classes</h2>
+			<div class="row">
+				<h2 class="center">Helper classes</h2>
+				<div class="desktop-visible">Desktop <i class="icon-desktop"></i></div>
+				<div class="tablet-visible">Tablet <i class="icon-laptop"></i></div>
+				<div class="phone-visible">Phone <i class="icon-phone"></i></div>
+				This is an icon <i class="icon-thumbs-up"></i>
 
-			<h2 class="center">Form elements</h2>
-			<form>
-				<fieldset>					
-					<label for="regularInput">Regular Input</label>
-					<input type="text" id="regularInput" />
-				</fieldset>
-				
-				<fieldset>
-					<label for="regularTextarea">Regular Textarea</label>
-					<textarea id="regularTextarea"></textarea>
-				</fieldset>
-				
-				<label for="selectList">Select List</label>
-				<select id="selectList">
-					<option value="Option 1">Option 1</option>
-					<option value="Option 2">Option 2</option>
-					<option value="Option 3">Option 3</option>
-					<option value="Option 4">Option 4</option>
-				</select>
+			</div>
+			
+			<div class="row">
+				<h2 class="center">Form elements</h2>
+				<form>
+					<div class="row">
+						<fieldset class="desktop-6">					
+							<label for="regularInput">Regular Input</label>
+							<input type="text" id="regularInput" class="full-width"/>
+						</fieldset>
+						
+						<fieldset class="desktop-6">
+							<label for="regularTextarea">Regular Textarea</label>
+							<textarea id="regularTextarea"></textarea>
+						</fieldset>
+					</div>
+					
+					<label for="selectList">Select List</label>
+					<select id="selectList">
+						<option value="Option 1">Option 1</option>
+						<option value="Option 2">Option 2</option>
+						<option value="Option 3">Option 3</option>
+						<option value="Option 4">Option 4</option>
+					</select>
 
-				<fieldset>
-					<legend>Checkboxes</legend>
-					<label for="regularCheckbox">
+					<fieldset>
+						<legend>Checkboxes</legend>						
 						<input type="checkbox" id="regularCheckbox" value="checkbox 1" />
 						<span>Regular Checkbox</span>
-					</label>
-					<label for="secondRegularCheckbox">
 						<input type="checkbox" id="secondRegularCheckbox" value="checkbox 2" />
 						<span>Regular Checkbox</span>
-					</label>
-				</fieldset>
-				<fieldset>
-					<legend>Radio Buttons</legend>
-					<label for="regularRadio">
+					</fieldset>
+					<fieldset>
+						<legend>Radio Buttons</legend>
 						<input type="radio" name="radios" id="regularRadio" value="radio 1" />
 						<span>Regular Radio</span>
-					</label>
-					<label for="secondRegularRadio">
 						<input type="radio" name="radios" id="secondRegularRadio" value="radio 2" />
 						<span>Regular Radio</span>
-					</label>
-				</fieldset>
-				<button type="submit">Submit Form</button>
-			</form>
-		</div> <!-- End of cs-container -->	
+						
+					</fieldset>
+					<button type="submit">Submit Form</button>
+				</form>				
+			</div>
+		</div> <!-- End of ch-container -->	
 	</body>
 </html>
