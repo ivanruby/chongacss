@@ -1,4 +1,4 @@
-
+/*
  * chongaCSS v0.0
  * Copyright 2014 Ivan Ruby
  * Licensed under MIT (https://github.com/ivanruby/chongacss/blob/master/LICENSE)
@@ -38,7 +38,7 @@ table {	border-collapse: collapse;	border-spacing: 0;}
 ================================================== */
 body {
   font-family: Candara,Calibri,Segoe,"Segoe UI",Optima,Arial,sans-serif;
-  font-size: 16px;
+  font-size: 17px;
   color: #000;
 }
 
@@ -65,8 +65,8 @@ input[type="password"],
 textarea,
 select {
   border: 1px solid #D1D1D1;
-  height: 36px;
-  padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+  height: 26px;
+  padding: 5px ; /* The 6px vertically centers text on FF, ignored by Webkit */
   border-radius: 4px;
   box-shadow: none;
   background: #fff; }
@@ -188,7 +188,123 @@ fieldset {
 
 /* # Widgets - Módulos visuais
 ================================================== */
-.menu-dropdown {}
+
+/* Menu Start */
+/*Strip the ul of padding and list styling*/
+nav { position: relative; z-index: 1;}
+ul {
+  list-style-type:none;
+  margin:0;
+  padding:0;
+  position: absolute;
+
+  transition: all .5s ease-in-out;
+}
+
+/*Create a horizontal list with spacing*/
+li {
+  display:inline-block;
+  float: left;
+  margin-right: 1px;
+}
+
+/*Style for menu links*/
+li a {
+  display:block;
+  min-width:140px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+  background: #2f3036;
+  text-decoration: none;
+}
+
+/*Hover state for top level links*/
+li:hover a {
+  background: #19c589;
+}
+
+/*Style for dropdown links*/
+li:hover ul a {
+  background: #f3f3f3;
+  color: #2f3036;
+  height: 40px;
+  line-height: 40px;
+}
+
+/*Hover state for dropdown links*/
+li:hover ul a:hover {
+  background: #19c589;
+  color: #fff;
+}
+
+/*Hide dropdown links until they are needed*/
+li ul {
+  display: none;
+}
+
+/*Make dropdown links vertical*/
+li ul li {
+  display: block;
+  float: none;
+}
+
+/*Prevent text wrapping*/
+li ul li a {
+  width: auto;
+  min-width: 100px;
+  padding: 0 20px;
+}
+
+/*Display the dropdown on hover*/
+ul li a:hover + .hidden, .hidden:hover {
+  display: block;
+}
+
+/*Style 'show menu' label button and hide it by default*/
+.show-menu {
+  text-decoration: none;
+  color: #fff;
+  background: #19c589;
+  text-align: center;
+  padding: 10px 0;
+  display: none;
+}
+
+/*Hide checkbox*/
+nav input[type=checkbox]{
+    display: none;
+}
+
+/*Show menu when invisible checkbox is checked*/
+input[type=checkbox]:checked ~ #menu{
+    display: block;
+}
+
+/*Responsive Styles*/
+
+@media screen and (max-width : 760px){
+  /*Make dropdown links appear inline*/
+  ul {
+    position: static;
+    display: none;
+  }
+  /*Create vertical spacing*/
+  li {
+    margin-bottom: 1px;
+  }
+  /*Make all menu links full width*/
+  ul li, li a {
+    width: 100%;
+  }
+  /*Display 'show menu' link*/
+  .show-menu {
+    display:block;
+  }
+} 
+/* Menu end */
+
 .modal, .janela {}
 
 .tooltip, .dica { position:relative; transition: all .5s ease-in-out; }
@@ -241,7 +357,7 @@ fieldset {
 .desktop-1, .desktop-2, .desktop-3, .desktop-4, .desktop-5, .desktop-6, .desktop-7, .desktop-8, .desktop-9, .desktop-10, .desktop-12, .desktop-12,
 .tablet-1, .tablet-2, .tablet-3, .tablet-4, .tablet-5, .tablet-6, .tablet-7, .tablet-8, .tablet-9, .tablet-10, .tablet-12, .tablet-12,
 .phone-1, .phone-2, .phone-3, .phone-4, .phone-5, .phone-6, .phone-7, .phone-8, .phone-9, .phone-10, .phone-12, .phone-12 { 
-  float: left; width: 100%; box-sizing: border-box;
+  position: relative; float: left; box-sizing: border-box; min-height: 1px; padding: 0 10px;
 }
 
 /* Standard grid - Non-responsive */
@@ -300,7 +416,7 @@ fieldset {
   .desktop-11        { width: 91.667%; }
   .desktop-12        { width: 100%%; }
 
-  .desktop-one-third, .desktop-um-terco { width:33.333%; }
+  .desktop-one-third, .desktop-um-terco { width: 33.333%; }
   .desktop-two-thirds, .desktop-dois-tercos { width: 66.667%; }
 }
 
@@ -323,7 +439,7 @@ fieldset {
   .tablet-11        { width: 91.667%; }
   .tablet-12        { width: 100%%; }
 
-  .tablet-one-third, .tablet-um-terco { width:33.333%; }
+  .tablet-one-third, .tablet-um-terco { width: 33.333%; }
   .tablet-two-thirds, .tablet-dois-tercos { width: 66.667%; }
 }
 
@@ -345,7 +461,7 @@ fieldset {
   .phone-11        { width: 91.667%; }
   .phone-12        { width: 100%%; }
 
-  .phone-one-third, .phone-um-terco { width:33.333%; }
+  .phone-one-third, .phone-um-terco { width: 33.333%; }
   .phone-two-thirds, .phone-dois-tercos { width: 66.667%; } 
 }
 
