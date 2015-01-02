@@ -284,7 +284,7 @@ input[type=checkbox]:checked ~ #menu{
 
 /*Responsive Styles*/
 
-@media screen and (max-width : 760px){
+@media screen and (max-width : 789px){
   /*Make dropdown links appear inline*/
   ul {
     position: static;
@@ -468,7 +468,7 @@ input[type=checkbox]:checked ~ #menu{
 /* Phone-sm (small) */
 @media only screen and (max-width: 500px) {
   .phone-visible, .visivel-phone { display: block; }
-  .ch-container { width: 320px; }
+  .ch-container { width: 100%;}
   .col-1, .cols-2, .cols-3, .cols-4, .cols-5, .cols-6, .cols-7, .cols-8, .cols-9, .cols-10, .cols-11, .cols-12,
   .desktop-1, .desktop-2, .desktop-3, .desktop-4, .desktop-5, .desktop-6, .desktop-7, .desktop-8, .desktop-9, .desktop-10, .desktop-12, .desktop-12,
   .tablet-1, .tablet-2, .tablet-3, .tablet-4, .tablet-5, .tablet-6, .tablet-7, .tablet-8, .tablet-9, .tablet-10, .tablet-12, .tablet-12,
