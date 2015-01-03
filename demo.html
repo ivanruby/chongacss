@@ -15,7 +15,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">		
 
 		<!-- Stylesheet -->
+		<link rel="stylesheet" href="reset.css" type="text/css" media="screen">
 		<link rel="stylesheet" href="chonga.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="font/elusive-icons-font.css" type="text/css" media="screen">
 	</head>	
 	<body>
 		<div class="ch-container">			
@@ -77,54 +79,60 @@
 			</div>
 			
 			<div class="row">
-				<h2 class="center">Helper classes</h2>
-				<div class="desktop-visible">Desktop <i class="icon-desktop"></i></div>
-				<div class="tablet-visible">Tablet <i class="icon-laptop"></i></div>
-				<div class="phone-visible">Phone <i class="icon-phone"></i></div>
-				This is an icon <i class="icon-thumbs-up"></i>
-
+				<div class="cols-12">
+					<h2 class="center">Helper classes</h2>
+					<div class="desktop-visible">Desktop <i class="icon-desktop"></i></div>
+					<div class="tablet-visible">Tablet <i class="icon-laptop"></i></div>
+					<div class="phone-lg-visible">Phone-lg <i class="icon-phone"></i></div>
+					<div class="phone-sm-visible">Phone-sm <i class="icon-phone"></i></div>
+					This is an icon <i class="icon-thumbs-up"></i>
+				</div>
 			</div>
 			
 			<div class="row">
-				<h2 class="center">Form elements</h2>
-				<form>
-					<div class="row">
-						<fieldset class="cols-6">					
-							<label for="regularInput">Regular Input</label>
-							<input type="text" id="regularInput" class="full-width"/>
-						</fieldset>
+				<div class="cols-12">
+					<h2 class="center">Form elements</h2>
+					<form>
+						<div class="row">
+							<fieldset class="cols-6">					
+								<label for="regularInput">Regular Input</label>
+								<input type="text" id="regularInput" class="full-width"/>
+							</fieldset>
+							
+							<fieldset class="cols-6">
+								<label for="regularTextarea">Regular Textarea</label>
+								<textarea id="regularTextarea" class="full-width"></textarea>
+							</fieldset>
+						</div>
 						
-						<fieldset class="cols-6">
-							<label for="regularTextarea">Regular Textarea</label>
-							<textarea id="regularTextarea" class="full-width"></textarea>
-						</fieldset>
-					</div>
-					
-					<label for="selectList">Select List</label>
-					<select id="selectList">
-						<option value="Option 1">Option 1</option>
-						<option value="Option 2">Option 2</option>
-						<option value="Option 3">Option 3</option>
-						<option value="Option 4">Option 4</option>
-					</select>
+						<label for="selectList">Select List</label>
+						<select id="selectList">
+							<option value="Option 1">Option 1</option>
+							<option value="Option 2">Option 2</option>
+							<option value="Option 3">Option 3</option>
+							<option value="Option 4">Option 4</option>
+						</select>
 
-					<fieldset>
-						<legend>Checkboxes</legend>						
-						<input type="checkbox" id="regularCheckbox" value="checkbox 1" />
-						<span>Regular Checkbox</span>
-						<input type="checkbox" id="secondRegularCheckbox" value="checkbox 2" />
-						<span>Regular Checkbox</span>
-					</fieldset>
-					<fieldset>
-						<legend>Radio Buttons</legend>
-						<input type="radio" name="radios" id="regularRadio" value="radio 1" />
-						<span>Regular Radio</span>
-						<input type="radio" name="radios" id="secondRegularRadio" value="radio 2" />
-						<span>Regular Radio</span>
-						
-					</fieldset>
-					<button type="submit">Submit Form</button>
-				</form>				
+						<fieldset>
+							<legend>Checkboxes</legend>						
+							<input type="checkbox" id="regularCheckbox" value="checkbox 1" />
+							<span>Regular Checkbox</span>
+							<input type="checkbox" id="secondRegularCheckbox" value="checkbox 2" />
+							<span>Regular Checkbox</span>
+						</fieldset>
+						<fieldset>
+							<legend>Radio Buttons</legend>
+							<input type="radio" name="radios" id="regularRadio" value="radio 1" />
+							<span>Regular Radio</span>
+							<input type="radio" name="radios" id="secondRegularRadio" value="radio 2" />
+							<span>Regular Radio</span>
+							
+						</fieldset>
+						<button 
+					
+					type="submit">Submit Form</button>
+					</form>
+				</div>			
 			</div>
 		</div> <!-- End of ch-container -->	
 	</body>
