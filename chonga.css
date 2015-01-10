@@ -94,6 +94,19 @@ select,
 fieldset {
   margin-bottom: 1em; }
 
+input[type="submit"], button {
+  border: none;
+  padding: 8px 6px;
+  text-transform: uppercase;
+  background-color: #19c589;
+  color: #FFF;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+}
+
+input[type="submit"]:hover, button:hover {
+  background-color: #26E5A2;
+}
 
 /* # Helper classes - Regras de ajuda
 ================================================== */
