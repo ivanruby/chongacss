@@ -99,6 +99,7 @@ input[type="submit"], button {
   padding: 8px 6px;
   text-transform: uppercase;
   background-color: #19c589;
+  border-radius: 3px;
   color: #FFF;
   cursor: pointer;
   transition: all .5s ease-in-out;
